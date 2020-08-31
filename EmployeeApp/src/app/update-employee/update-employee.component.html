@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Employee Management System</h1>
+  <hr>
+  <h2>Update Employee</h2>
+
+  <form class="form" #employeeForm = "ngForm">
+    <input type="text" name="firstname" [(ngModel)]="employee.firstName"
+      placeholder="Employee First Name" class="form-control mb-4 col-4">
+
+      <input type="text" name="lastname" [(ngModel)]="employee.lastName"
+      placeholder="Employee Last Name" class="form-control mb-4 col-4">
+
+      <input type="text" name="email" [(ngModel)]="employee.email"
+      placeholder="Employee Email" class="form-control mb-4 col-4">
+
+      <button type="button" (click)="updateEmployee()" [disabled]="employeeForm.invalid" class="btn btn-info col-2"> Update Employee</button>
+  </form>
+
+  <hr>
+
+  <a routerLink="/showEmployees">Back to Employee List</a>
+</div>
